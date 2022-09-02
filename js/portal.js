@@ -11,7 +11,7 @@ const displayCategories = async(categoriesData) => {
         categoriesData.forEach(element => {
             const categoriesDiv = document.createElement('div');
             categoriesDiv.innerHTML = `
-            <a onclick="loadCategoryList()">${element.category_name}</a>
+            <button onclick="loadCategoryList()">${element.category_name}</button>
             `;
             categoriesContainer.appendChild(categoriesDiv);
         });
@@ -31,7 +31,7 @@ const displayCategoryList = async(data) =>{
             const categoryDetailsDiv = document.createElement('div');
             categoryDetailsDiv.classList.add('card');
             categoryDetailsDiv.innerHTML = `
-            <div class="card lg:card-side bg-base-100 shadow-xl">
+            <div class="card lg:card-side bg-base-100 shadow-xl mb-4">
                 <figure><img src="${element.thumbnail_url}" alt="Album"></figure>
                 <div class="card-body">
                     <h2 class="card-title">${element.title}</h2>
@@ -39,7 +39,7 @@ const displayCategoryList = async(data) =>{
                     <div class="grid grid-cols-3 gap-4">
                         <div class="grid grid-cols-6 gap-4">
                             <div>
-                                <img class="rounded h-full w-12" src="${element.image_url}"/>
+                                <img class="rounded h-full w-12" src="${element.author.img}"/>
                             </div>
                             <div>
                                 <p>${element.author.name}</p>
