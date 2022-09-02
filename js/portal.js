@@ -6,27 +6,27 @@ const loadCategories = async() => {
 }
 
 const displayCategories = async(categoriesData) => {
-    console.log(categoriesData)
     const categoriesContainer = document.getElementById('all-category');
         categoriesData.forEach(element => {
             const categoriesDiv = document.createElement('div');
             categoriesDiv.innerHTML = `
-            <button onclick="loadCategoryList()">${element.category_name}</button>
+            <button onclick="loadCategoryList('${element.category_id}')">${element.category_name}</button>
             `;
             categoriesContainer.appendChild(categoriesDiv);
         });
 }
 
-const loadCategoryList = async() => {
-    const url = `https://openapi.programming-hero.com/api/news/category/01`
+const loadCategoryList = async(id) => {
+    const url = `https://openapi.programming-hero.com/api/news/category/${id}`
     const res = await fetch(url);
     const data = await res.json();
+    console.log(data.data);
     displayCategoryList(data.data);
 }
 
 const displayCategoryList = async(data) =>{
-    console.log(data);
     const categoryDetails = document.getElementById('category-details');
+    categoryDetails.textContent = '';
         data.forEach(element => {
             const categoryDetailsDiv = document.createElement('div');
             categoryDetailsDiv.classList.add('card');
@@ -35,7 +35,7 @@ const displayCategoryList = async(data) =>{
                 <figure><img src="${element.thumbnail_url}" alt="Album"></figure>
                 <div class="card-body">
                     <h2 class="card-title">${element.title}</h2>
-                    <p>${element.details}</p>
+                    <p>${element.details.length > 250 ? element.details.slice(0,250) + '...' : element.details}</p>
                     <div class="grid grid-cols-3 gap-4">
                         <div class="grid grid-cols-6 gap-4">
                             <div>
