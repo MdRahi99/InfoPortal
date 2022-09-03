@@ -30,12 +30,51 @@
     </header>
 
     <main class="mx-auto w-5/6 my-6">
-        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
-            <div class="collapse-title text-xl font-medium">
-              Focus me to see content
+        <div class="my-12 py-12">
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-4">
+                <div class="collapse-title text-xl font-medium">
+                  Difference between Var, Let & Const Variable.
+                </div>
+                <div class="collapse-content"> 
+                  <ol class="list-disc p-4">
+                    <li>In the var tab, when you will run the code, you will see an error as a is not defined because var variables are only accessible in the function scope.
+                    </li>
+                    <li>In the let tab, when you run the code, you will see an error as i is not defined because let variables are only accessible within the block they are declared.</li>
+                    <li>In the const tab, when you run the code, you will see that x was defined under the block was accessible, but when you try to access x outside that block, you will get an error.</li>
+                  </ol>
+                </div>
             </div>
-            <div class="collapse-content"> 
-              <p>tabindex="0" attribute is necessary to make the div focusable</p>
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-4">
+                <div class="collapse-title text-xl font-medium">
+                  Difference between Map, ForEach, Filter, Find.
+                </div>
+                <div class="collapse-content"> 
+                  <ol class="list-disc p-4">
+                    <li>.map() executes the same code on every element in an array and returns a new array with the updated elements.
+                    </li>
+                    <li>.forEach(), is used to execute the same code on every element in an array but does not change the array and it returns undefined.</li>
+                    <li>.filter() checks every element in an array to see if it meets a certain criteria and returns a new array with the elements that return truthy for the criteria.</li>
+                    <li>.find() is also a search function like the previous but they differ in one small detail — this function returns only one match in an array. If in an array is more than one result, the function will return the first that has matched.</li>
+                  </ol>
+                </div>
+            </div>
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-4">
+                <div class="collapse-title text-xl font-medium">
+                    Why do we use template string in JavaScript?
+                </div>
+                <div class="collapse-content"> 
+                  <p>
+                    Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements.
+                  </p>
+                </div>
+            </div>
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+                <div class="collapse-title text-xl font-medium">
+                    Regular vs Arrow Function
+                </div>
+                <div class="collapse-content"> 
+                  <p>Arrow function — also called fat arrow function— is a new feature introduced in ES6 that is a more concise syntax for writing function expressions. While both regular JavaScript functions and arrow functions work in a similar manner, there are certain differences between them. Arrow functions do not have an arguments binding. However, they have access to the arguments object of the closest non-arrow parent function. Named and rest parameters are heavily relied upon to capture the arguments passed to arrow functions.</p>
+                </div>
             </div>
         </div>
     </main>
