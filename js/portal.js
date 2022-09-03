@@ -29,6 +29,7 @@ const loadCategoryList = async(id) => {
 }
 
 const displayCategoryList = async(data) =>{
+
     document.getElementById('spinner').style.display = 'none';
     const categoryDetails = document.getElementById('category-details');
     categoryDetails.textContent = '';
@@ -62,6 +63,15 @@ const displayCategoryList = async(data) =>{
             `;
             categoryDetails.appendChild(categoryDetailsDiv);
         });
+
+        const totalItems = document.getElementById('total-items');
+        totalItems.textContent = '';
+                const itemsDiv = document.createElement('div');
+                itemsDiv.classList.add('card-body');
+                itemsDiv.innerHTML = ` 
+                    <p class="text-3xl text-center">${data.length} items found for category ${data[0].category_id}</p>
+                `;
+                totalItems.appendChild(itemsDiv);
 }
 
 const loadNews = async(newsId) => {
