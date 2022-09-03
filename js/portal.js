@@ -2,10 +2,15 @@ document.getElementById('spinner').style.display = 'none';
 document.getElementById('footer').style.display = 'none';
 
 const loadCategories = async() => {
-        const url = `https://openapi.programming-hero.com/api/news/categories`
-        const res = await fetch(url);
-        const data = await res.json();
-        displayCategories(data.data.news_category);
+    const url = `https://openapi.programming-hero.com/api/news/categories`
+        try{
+            const res = await fetch(url);
+            const data = await res.json();
+            displayCategories(data.data.news_category);
+        }
+        catch (error){
+            console.log(error);
+        }
 }
 
 const displayCategories = async(categoriesData) => {
@@ -23,9 +28,14 @@ const loadCategoryList = async(id) => {
     document.getElementById('spinner').style.display = 'block';
     document.getElementById('footer').style.display = 'block';
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`
-    const res = await fetch(url);
-    const data = await res.json();
-    displayCategoryList(data.data);
+    try{
+        const res = await fetch(url);
+        const data = await res.json();
+        displayCategoryList(data.data);
+    }
+    catch(error){
+        console.log(error);
+    }
 }
 
 const displayCategoryList = async(data) =>{
@@ -77,9 +87,14 @@ const displayCategoryList = async(data) =>{
 const loadNews = async(newsId) => {
     document.getElementById('spinner').style.display = 'block';
     const url = `https://openapi.programming-hero.com/api/news/${newsId}`
-    const res = await fetch(url);
-    const data = await res.json();
-    displayNewsDetails(data.data[0]);
+    try{
+        const res = await fetch(url);
+        const data = await res.json();
+        displayNewsDetails(data.data[0]);
+    }
+    catch(error){
+        console.log(error);
+    }
 }
 
 const displayNewsDetails = async(info) => {
