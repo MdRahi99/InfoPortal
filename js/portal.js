@@ -37,15 +37,15 @@ const displayCategoryList = async(data) =>{
             const categoryDetailsDiv = document.createElement('div');
             categoryDetailsDiv.classList.add('card');
             categoryDetailsDiv.innerHTML = `
-            <div class="card lg:card-side bg-base-100 shadow-xl mb-4">
+            <div class="card lg:card-side bg-base-100 shadow-lg mb-12">
                 <figure><img src="${element.thumbnail_url ? element.thumbnail_url : "No data Found"}" alt="Album"></figure>
                 <div class="card-body">
                     <h2 class="card-title">${element.title ? element.title : "No data Found"}</h2>
                     <p>${element.details.length > 250 ? element.details.slice(0,250) + '...' : element.details}</p>
                     <div class="grid grid-cols-3 gap-4">
-                        <div class="grid grid-cols-6 gap-4">
+                        <div class="grid grid-cols-1 lg:grid-cols-6 md:grid-cols-4 gap-4">
                             <div>
-                                <img class="rounded w-16" src="${element.author.img ? element.author.img : "No data Found"}"/>
+                                <img class="rounded h-full lg:w-16" src="${element.author.img ? element.author.img : "No data Found"}"/>
                             </div>
                             <div>
                                 <p>${element.author.name ? element.author.name : "No data Found"}</p>
@@ -69,7 +69,7 @@ const displayCategoryList = async(data) =>{
                 const itemsDiv = document.createElement('div');
                 itemsDiv.classList.add('card-body');
                 itemsDiv.innerHTML = ` 
-                    <p class="text-3xl text-center">${data.length} items found for category ${data[0].category_id}</p>
+                    <p class="text-2xl font-semibold text-center">${data.length} items found for category ${data[0].category_id}</p>
                 `;
                 totalItems.appendChild(itemsDiv);
 }

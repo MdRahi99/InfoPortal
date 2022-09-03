@@ -12,14 +12,14 @@
 <body>
     
     <header class="mx-auto w-5/6">
-        <div class="navbar bg-base-100">
-            <div class="flex-1">
-              <a class="text-4xl font-bold"><span class="bg-accent rounded p-2">Info</span> Portal</a>
+        <div class="navbar bg-base-100 flex-col lg:flex-row md:flex-row">
+            <div class="flex-1 my-4">
+              <a class="text-2xl lg:text-4xl font-bold"><span class="bg-accent rounded p-2">Info</span> Portal</a>
             </div>
-            <div class="flex-none">
-                <ul class="menu menu-horizontal text-2xl font-semibold">
-                    <li><a>News</a></li>
-                    <li onclick="Redirect()"><a>Blog</a></li>
+            <div class="flex-none-lg flex-col lg:flex-row md:flex-row">
+                <ul class="menu menu-horizontal text-1xl font-semibold my-3 mx-3">
+                    <li class="bg-base-200 font-bold"><a>News</a></li>
+                    <li class="bg-base-200 font-bold" onclick="Redirect()"><a>Blog</a></li>
                 </ul>
                 <div class="w-16">
                   <img class="rounded-full" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" />
@@ -31,7 +31,7 @@
 
     <main class="mx-auto w-5/6 my-6">
         
-        <div id="all-category" class="grid justify-items-center grid-cols-8 gap-4 my-12">
+        <div id="all-category" class="grid justify-items-center grid-cols-1 lg:grid-cols-8 md:grid-cols-4 gap-4 my-12 font-semibold">
             
         </div>
 
