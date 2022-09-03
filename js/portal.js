@@ -43,8 +43,9 @@ const displayCategoryList = async(data) =>{
     document.getElementById('spinner').style.display = 'none';
     const categoryDetails = document.getElementById('category-details');
     categoryDetails.textContent = '';
+    const sortedResponse = data.sort((a,b) => b.total_view - a.total_view);
             if(data.length !== 0){
-                data.forEach(element => {
+                sortedResponse.forEach(element => {
                     const categoryDetailsDiv = document.createElement('div');
                     categoryDetailsDiv.classList.add('card');
                     categoryDetailsDiv.innerHTML = `
