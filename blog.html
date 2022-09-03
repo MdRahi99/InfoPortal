@@ -11,25 +11,26 @@
 </head>
 <body>
     
-    <header class="mx-auto w-5/6">
-        <div class="navbar bg-base-100">
-            <div class="flex-1">
-              <a class="text-4xl font-bold"><span class="bg-accent rounded p-2">Info</span> Portal</a>
-            </div>
-            <div class="flex-none">
-                <ul class="menu menu-horizontal text-2xl font-semibold">
-                    <li onclick="againRedirect()"><a>News</a></li>
-                    <li><a>Blog</a></li>
-                </ul>
-                <div class="w-16">
-                  <img class="rounded-full" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" />
-                </div>
+  <header class="mx-auto w-5/6">
+    <div class="navbar bg-base-100 flex-col lg:flex-row md:flex-row">
+        <div class="flex-1 my-4">
+          <a class="text-2xl lg:text-4xl font-bold"><span class="bg-accent rounded p-2">Info</span> Portal</a>
+        </div>
+        <div class="flex-none-lg flex-col lg:flex-row md:flex-row">
+            <ul class="menu menu-horizontal text-2xl font-semibold">
+              <li onclick="againRedirect()"><a>News</a></li>
+              <li><a>Blog</a></li>
+            </ul>
+            <div class="w-16">
+              <img class="rounded-full" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" />
             </div>
         </div>
-        <hr class="border-2 mt-4">
-    </header>
+    </div>
+    <hr class="border-2 mt-4">
+  </header>
 
-    <main class="mx-auto w-5/6 my-6">
+    
+  <main class="mx-auto w-5/6 my-6">
         <div class="my-12 py-12">
             <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-4">
                 <div class="collapse-title text-xl font-medium">
@@ -77,9 +78,9 @@
                 </div>
             </div>
         </div>
-    </main>
+  </main>
 
-    <footer id="footer" class="footer footer-center p-10 bg-base-200 text-base-content rounded">
+  <footer id="footer" class="footer footer-center p-10 bg-base-200 text-base-content rounded">
             <div class="mb-6">
               <div class="grid grid-flow-col gap-4">
                 <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a> 
@@ -90,14 +91,14 @@
             <div>
               <p>Copyright © 2022 - All right reserved by Info Portal</p>
             </div>
-    </footer>
+  </footer>
 
 
-    <script>
+  <script>
         function againRedirect(){
             window.location = 'index.html'
         }
-    </script>
-    <script src="./js/portal.js"></script>
+  </script>
+  <script src="./js/portal.js"></script>
 </body>
 </html>
